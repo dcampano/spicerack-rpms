@@ -1,5 +1,5 @@
 Name:          	nginx 
-Version:       	1.2.0
+Version:       	1.2.3
 Release:        1%{?dist}
 Summary:        Nginx Webserver
 
@@ -8,6 +8,9 @@ License:       TEST
 URL:            TEST
 Source0:       	http://nginx.org/download/%{name}-%{version}.tar.gz 
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
+BuildRequires:     pcre-devel
+BuildRequires:     openssl-devel
+BuildRequires:     GeoIP-devel
 
 
 %description
