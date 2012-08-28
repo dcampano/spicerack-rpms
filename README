@@ -1,0 +1,4 @@
+To setup the project
+
+1. Clone the repo
+2. Inspect and run setup.sh to create the .rpmmacros file
