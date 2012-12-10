@@ -1,8 +1,9 @@
 %define rubyver         1.9.3
 %define rubyminorver    p327
+%define _prefix /opt/ruby/%{rubyver}-%{rubyminorver}
 
-Name:           rbenv-ruby193-p327
-Version:        %{rubyver}%{rubyminorver}
+Name:           ruby%{rubyver}-%{rubyminorver}
+Version:        1.0
 Release:        1%{?dist}
 License:        Ruby License/GPL - see COPYING
 URL:            http://www.ruby-lang.org/
@@ -24,7 +25,7 @@ straight-forward, and extensible.
 
 %build
 #export CFLAGS="$RPM_OPT_FLAGS -Wall -fno-strict-aliasing"
-./configure --prefix=/opt/rbenv --disable-install-doc --enable-shared
+./configure --prefix=%{_prefix} --disable-install-doc --enable-shared
 
 make %{?_smp_mflags}
 
@@ -40,7 +41,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(-, root, root)
-/opt/rbenv/*
+%{_prefix}/*
 
 
 %changelog

@@ -1,6 +1,6 @@
 (
-cat <<'EOF'
-%_topdir /home/ec2-user/spicerack-rpms/rpmbuild
+cat <<EOF
+%_topdir ${HOME}/spicerack-rpms/rpmbuild
 %dist .spicerack
 EOF
 ) > ~/.rpmmacros
