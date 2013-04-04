@@ -2,3 +2,14 @@ To setup the project
 
 1. Clone the repo
 2. Inspect and run setup.sh to create the .rpmmacros file
+
+
+Use the following to help install the build dependencies
+
+yum install rpmdevtools
+
+Download the source for the specfile
+spectool -C rpmbuild/SOURCES/ -g rpmbuild/SPECS/ruby200-p0.spec 
+
+Install the build dependencies
+yum-builddep rpmbuild/SPECS/ruby200-p0.spec
