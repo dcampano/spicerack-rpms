@@ -1,6 +1,6 @@
 (
 cat <<EOF
-%_topdir ${HOME}/spicerack-rpms/rpmbuild
+%_topdir /vagrant/rpmbuild
 %dist .spicerack
 EOF
 ) > ~/.rpmmacros
