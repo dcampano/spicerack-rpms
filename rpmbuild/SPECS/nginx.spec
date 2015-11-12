@@ -1,5 +1,5 @@
 Name:          	nginx 
-Version:       	1.2.3
+Version:       	1.6.2
 Release:        1%{?dist}
 Summary:        Nginx Webserver
 
